@@ -1,9 +1,15 @@
 package com.hrvojematic.chess.pieces;
 
 import com.hrvojematic.chess.game.Board;
+import com.hrvojematic.chess.game.Player;
 import com.hrvojematic.chess.game.Position;
 
 public class Queen extends Piece {
+
+	public Queen(Player owner) {
+		super(owner);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public boolean isValidMove(Position start, Position dest, Board board) {
@@ -21,6 +27,11 @@ public class Queen extends Piece {
 			return PathTrace.traceDiagonalPath(start, dest, board);
 		}
 		return false;
+	}
+
+	@Override
+	public String getPieceSymbol() {
+		return "Q";
 	}
 
 }
