@@ -1,5 +1,17 @@
 package com.hrvojematic.chess.pieces;
 
-public class Bishop {
+import com.hrvojematic.chess.game.Board;
+import com.hrvojematic.chess.game.Position;
+
+public class Bishop extends Piece {
+
+	@Override
+	public boolean isValidMove(Position start, Position dest, Board board) {
+		if(start==dest) return false;
+		if(board.getPiece(dest)!=null && board.getPiece(dest).getOwner()==this.getOwner()) {
+			return false;
+		}
+		return PathTrace.traceDiagonalPath(start, dest, board);
+	}
 
 }

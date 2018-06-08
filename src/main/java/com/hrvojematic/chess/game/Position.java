@@ -16,13 +16,13 @@ public class Position {
 	 */
 	private final int y;
 	
-	/** Minimum x on chess board. */
+	/** Minimum x coordinate on chess board. */
 	private static final int MIN_X = 1;
-	/** Maximum x on chess board. */
+	/** Maximum x coordinate on chess board. */
 	private static final int MAX_X = 8;
-	/** Minimum y on chess board. */
+	/** Minimum y coordinate on chess board. */
 	private static final int MIN_Y = 1;
-	/** Maximum y on chess board. */
+	/** Maximum y coordinate on chess board. */
 	private static final int MAX_Y = 8;
 	
 	/**
